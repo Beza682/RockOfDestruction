@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 7478301902803415239}
   m_Layer: 0
   m_Name: Alcove
-  m_TagString: Large
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3161bf85d6b2a448617aaad7fe44fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectStrength: 2
+  value: 100
 --- !u!1 &8357232620525366814
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +605,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8357232621195167906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.2, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

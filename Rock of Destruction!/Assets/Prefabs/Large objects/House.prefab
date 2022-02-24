@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1421255122879521731}
   m_Layer: 0
   m_Name: House
-  m_TagString: Large
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a3161bf85d6b2a448617aaad7fe44fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectStrength: 4
+  value: 200
 --- !u!1 &1478646288628349562
 GameObject:
   m_ObjectHideFlags: 0

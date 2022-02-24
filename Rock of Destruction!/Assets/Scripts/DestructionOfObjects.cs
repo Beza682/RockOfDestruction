@@ -1,99 +1,55 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DestructionOfObjects : MonoBehaviour
 {
-    private float strength;
-    private float value;
+    public float objectStrength;
+    public float value;
 
+    public static List<GameObject> destructibleObjects;
+    public static float playerStrength;
 
     private void Start()
     {
-
+        //playerStrength = GameHelper.Instance.playerStrength;
+        //Debug.Log(playerStrength);
     }
 
     private void OnCollisionEnter (Collision other)
     {
         if (other.transform.CompareTag("Player"))
         {
-            switch (tag)
+            //Debug.Log(value);
+            Debug.Log(objectStrength);
+            //Debug.Log(playerStrength);
+
+            if ((playerStrength > objectStrength || playerStrength == objectStrength) && objectStrength > 1)
             {
-                case "Small":
+                gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                gameObject.GetComponent<Collider>().enabled = false;
 
-                    switch (name)
-                    {
-                        case "Human":
+                GameHelper.Instance.score += value;
 
-                            value = 50f;
+                Destroy(gameObject, 2f);
+                //GameHelper.Instance.destructibleObjects.Remove(gameObject);
+                destructibleObjects.Remove(gameObject);
 
-                            break;
 
-                        case "Barrier":
+            }
+            else if (objectStrength == 1)
+            {
+                GameHelper.Instance.score += value;
 
-                            value = 10f;
+                Destroy(gameObject, 2f);
+                //GameHelper.Instance.destructibleObjects.Remove(gameObject);
+                destructibleObjects.Remove(gameObject);
 
-                            break;
 
-                        case "Tree":
-
-                            value = 80f;
-
-                            break;
-                    }
-
-                    GameHelper.singleton.score += value;
-                    Destroy(gameObject, 2f);
-
-                    break;
-               
-                case "Large":
-
-                    switch (name)
-                    {
-                        case "Gate":
-
-                            value = 1000f;
-
-                            break;
-
-                        case "PassageWalls":
-
-                            value = 1500f;
-
-                            break;
-
-                        case "Wall":
-
-                            value = 800f;
-
-                            break;
-
-                        case "Tower":
-
-                            value = 500f;
-
-                            break;
-
-                        case "House":
-
-                            value = 200f;
-
-                            break;
-
-                        case "Alcove":
-
-                            value = 100f;
-
-                            break;
-                    }
-
-                    gameObject.GetComponent<Rigidbody>().isKinematic = true;
-                    gameObject.GetComponent<Collider>().enabled = false;
-
-                    GameHelper.singleton.score += value;
-
-                    Destroy(gameObject, 2f);
-
-                    break;
+            }
+            else if (playerStrength < objectStrength)
+            {
+                gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                //Destroy(GameHelper.Instance.player);
             }
         }
     }

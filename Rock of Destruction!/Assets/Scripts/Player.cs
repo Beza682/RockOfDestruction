@@ -2,49 +2,35 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     public Vector3 direction;
     public float acceleration;
+    public float turnAcceleration;
     private Rigidbody rb;
-    private float strength;
-    private float size;
+
+    public float strength;
+    public float size;
 
     private Vector2 screenPoint;
     private Vector2 deltaScreenPoint;
 
+
     void Start()
     {
+        transform.localScale = transform.localScale * size;
+        GameHelper.Instance.playerSize = size;
+        //GameHelper.Instance.playerStrength = strength;
+        DestructionOfObjects.playerStrength = strength;
+
         rb = gameObject.GetComponent<Rigidbody>();
-        strength = 5f;
+
         direction.z = 1;
-        acceleration = 20;
     }
 
     void FixedUpdate()
     {
         rb.AddForce(direction.normalized * acceleration);
-        GameHelper.singleton.distance = transform.position.z;
+        GameHelper.Instance.distance = transform.position.z;
 
-        //if (Input.GetKey(KeyCode.A))
-        //{
-        //    direction.x -= 10;
-        //}
-        //else if (Input.GetKey(KeyCode.D))
-        //{
-        //    direction.x += 10;
-        //}
-        //else
-        //{
-        //    direction.x = 0;
-        //}
-        //if (Input.GetKey(KeyCode.W))
-        //{
-        //    acceleration = 60;
-        //}
-        //else
-        //{
-        //    acceleration = 20;
-        //}
     }
     void OnMouseDown()
     {
@@ -55,36 +41,24 @@ public class Player : MonoBehaviour
     {
         deltaScreenPoint = Camera.main.ViewportToScreenPoint(Input.mousePosition);
 
-        //if (Mathf.Abs(deltaScreenPoint.x - screenPoint.x) > Mathf.Abs(deltaScreenPoint.y - screenPoint.y))
-        //{
-            if (screenPoint.x < deltaScreenPoint.x && direction.x < 10)
-            {
-                //direction.x = 3;
+        if (screenPoint.x < deltaScreenPoint.x/* && direction.x < 10*/)
+        {
+            //direction.x += 1;
+            direction.x = 1;
 
-                direction.x ++;
-            }
-            else if (screenPoint.x > deltaScreenPoint.x && direction.x > -10)
-            {
-                //direction.x = -3;
-                direction.x --;
-            }
-        //}
-        //else if (Mathf.Abs(deltaScreenPoint.x - screenPoint.x) < Mathf.Abs(deltaScreenPoint.y - screenPoint.y))
-        //{
-        //    if (screenPoint.y < deltaScreenPoint.y)
-        //    {
-        //        acceleration = 60;
-        //    }
-        //    else if (screenPoint.x > deltaScreenPoint.x)
-        //    {
-        //        acceleration = 0;
-        //    }
-        //}
+            rb.AddForce(Vector3.right * turnAcceleration);
+        }
+        else if (screenPoint.x > deltaScreenPoint.x/* && direction.x > -10*/)
+        {
+            //direction.x -= 1;
+            direction.x = -1;
+
+            rb.AddForce(Vector3.left * turnAcceleration);
+        }
     }
 
     private void OnMouseUp()
     {
         direction.x = 0;
-        acceleration = 20;
     }
 }

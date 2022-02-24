@@ -1,16 +1,11 @@
-internal enum LargeOjects
+internal enum Objects
 {
     Alcove,
-    PassageWalls,
-    Gate,
+    Passage,
     House,
     Tower,
-    Wall
-}
-
-internal enum SmallObjects
-{
-    Human,
+    Wall,
+    People,
     Tree,
     Barrier
 }
