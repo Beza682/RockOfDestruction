@@ -4,11 +4,13 @@ using UnityEngine;
 public class SpawnController : MonoBehaviour
 {
     [Header("Location")]
-    public int locationWidth;
-    public int locationLength;
-    private float prefabsZone;
-    public Transform spawnPoint;
-    public GameObject[] locationPrefabs;
+    private float locationWidth = 100;
+    private float locationLength = 500;
+    private float prefabsZoneWidth = 90;
+
+    public Transform spawnObjects;
+    public GameObject ground;
+    public GameObject lateralBorder;
 
     [Header("LargeObjects")]
     public int largeCount;
@@ -27,14 +29,10 @@ public class SpawnController : MonoBehaviour
     public GameObject wallPrefab;
 
 
+    private GameObject elementOnScene;
+    private List<GameObject> elementsOnScene = new List<GameObject>();
 
-    private GameObject destrObject;
-    private List<GameObject> destructibleObjects = new List<GameObject>();
 
-    private GameObject locObject;
-    private List<GameObject> locationObjects = new List<GameObject>();
-    
-    
     private float objectStrength;
 
 
@@ -50,17 +48,27 @@ public class SpawnController : MonoBehaviour
 
     void Start()
     {
-        //destrObject = destrObject = ObjectType.ObjectTyp(destructiblePrefabs);
-        prefabsZone = locationWidth - 10;
 
+        //destrObject = destrObject = ObjectType.ObjectTyp(destructiblePrefabs);
+        //prefabsZoneWidth = locationWidth - 10;
         //GameHelper.Instance.destructibleObjects = destructibleObjects;
-        DestructionOfObjects.destructibleObjects = destructibleObjects;
+        DestructionOfObjects.destructibleObjects = elementsOnScene;
 
         spawnPosition = 0;
+        firstSpawnZone = locationLength;
         secondSpawnZone = locationLength * 2;
-        LocationSpawn(spawnPosition, secondSpawnZone);
+
+        LocationSpawn(spawnPosition, firstSpawnZone);
+        ZoneSpawner(firstSpawnZone);
+
+        LocationSpawn(firstSpawnZone, secondSpawnZone);
         ZoneSpawner(secondSpawnZone);
-        SpawnDestructibleObjects();
+        //MediumObjectsSpawn(spawnPosition, firstSpawnZone);
+        //MediumObjectsSpawn(firstSpawnZone, secondSpawnZone);
+        LargeObjectsSpawn(spawnPosition, firstSpawnZone);
+        LargeObjectsSpawn(firstSpawnZone, secondSpawnZone);
+
+        //SpawnDestructibleObjects();
 
     }
 
@@ -71,58 +79,53 @@ public class SpawnController : MonoBehaviour
         if (playerPositionZ >= spawnPosition)
         {
             playerPositionX = Mathf.Round(GameHelper.Instance.player.transform.position.x);
-            Debug.Log(playerPositionX);
+            //Debug.Log(playerPositionX);
             spawnPosition += locationLength;
             firstSpawnZone = spawnPosition + locationLength;
             secondSpawnZone = firstSpawnZone + locationLength;
             LocationSpawn(firstSpawnZone, secondSpawnZone);
             ZoneSpawner(secondSpawnZone);
-            //SpawnDestructibleObjects();
+            //MediumObjectsSpawn(firstSpawnZone, secondSpawnZone);
+            LargeObjectsSpawn(firstSpawnZone, secondSpawnZone);
+
+            RemoveElements(elementsOnScene);
+
         }
-
-        //Debug.Log(playerPosition % 100);
-
     }
-    //void ZoneLimiter()
-    //{
-    //    for (int z = playerPosition + 170; z < playerPosition + 180; z += 10)
-    //    {
-    //        for (int x = -prefabsZone; x < prefabsZone + 1; x += 5)
-    //        {
-    //            var exist = destructibleObjects.Exists(c => c.gameObject.transform.position.x == x && c.gameObject.transform.position.z == z);
-
-    //            if (!exist)
-    //            {
-    //                if(playerPosition % 100 == 0)
-    //                {
-                        
-    //                    //GameObject passage = Instantiate(destructiblePrefabs[1], new Vector3(x, 0, z), Quaternion.identity);
-    //                    GameObject wall = Instantiate(destructiblePrefabs[4], new Vector3(x, 0, z), Quaternion.identity);
-
-    //                    //destructibleObjects.Add(passage);
-    //                    destructibleObjects.Add(wall);
-    //                }
-    //            }
-    //            //Debug.Log(locationObjects.Count);
-
-    //            while (destructibleObjects.Count > prefabsZone * 4)
-    //            {
-    //                Destroy(destructibleObjects[0].gameObject);
-    //                destructibleObjects.RemoveAt(0);
-    //            }
-    //        }
-    //    }
-    //}
-    
+  
     private void ZoneSpawner(float finishZone)
     {
-        destrObject = Instantiate(passagePrefab, new Vector3(playerPositionX, 0, finishZone), Quaternion.identity);
+        var passagePoint = new Vector3(Random.Range(-50, 50), 0, finishZone);
+        elementOnScene = Instantiate(passagePrefab, passagePoint, Quaternion.identity, spawnObjects);
+        ElementComplexity(elementOnScene);
 
-        for (float /*z = finishZone - 10,*/ x = (-prefabsZone - 7.5f); x <= prefabsZone + 7.5f; x += 5f)
+        for (float x = (-prefabsZoneWidth - 2.5f); x <= prefabsZoneWidth + 2.5f; x += 5f)
         {
-            if (x < (playerPositionX - 10f) || x > (playerPositionX + 10f))
+            if (x < (passagePoint.x - 10f) || x > (passagePoint.x + 10f))
             {
-                destrObject = Instantiate(wallPrefab, new Vector3(x, 0, finishZone), Quaternion.identity);
+                elementOnScene = Instantiate(wallPrefab, new Vector3(x, 0, finishZone), Quaternion.identity, spawnObjects);
+                ElementComplexity(elementOnScene);
+            }
+        }
+    }
+    private void GenerateRandomElements(GameObject[] generatedElements, int count, float startSpawn, float finishSpawn)
+    {
+        while (count > 0)
+        {
+            count--;
+
+            var indexElement = Random.Range(0, generatedElements.Length);
+            elementOnScene = generatedElements[indexElement];
+            var offset = generatedElements[indexElement].GetComponent<Collider>().transform.localScale.x / 2;
+            var position = new Vector3(Random.Range(-prefabsZoneWidth + offset, prefabsZoneWidth - offset), 0, Random.Range(startSpawn, finishSpawn));
+            
+            
+            //if (Random.Range(0, 100) < spawnChance && count > 0)
+            {
+
+                elementOnScene = Instantiate(generatedElements[indexElement], position, Quaternion.identity, spawnObjects);
+                ElementComplexity(elementOnScene);
+                //GenerateElement(spawnPoints[i].transform.position, generatedElements[randomElement]);
             }
         }
     }
@@ -133,9 +136,9 @@ public class SpawnController : MonoBehaviour
 
         //objects = destructible[Random.Range(0, destructiblePrefabs.Length)];
         //objects = destructible[0];
-        for (float z = playerPositionZ + 100, x = -prefabsZone; x < prefabsZone + 10; x += 20)
+        for (float z = playerPositionZ + 100, x = -prefabsZoneWidth; x < prefabsZoneWidth + 10; x += 20)
         {
-            var random = Random.Range(0, mediumPrefabs.Length);
+            var mediumRandom = Random.Range(0, mediumPrefabs.Length);
             //objects = destructible[random];
 
             //switch (objects) // подумать о том как граммотно его удалить
@@ -180,7 +183,7 @@ public class SpawnController : MonoBehaviour
             //        break;
 
             //}
-            destrObject = Instantiate(mediumPrefabs[random], new Vector3(x, 0, z), Quaternion.identity);
+            elementOnScene = Instantiate(mediumPrefabs[mediumRandom], new Vector3(x, 0, z), Quaternion.identity);
 
             //if (destrObject.GetComponent<DestructionOfObjects>() == null)
             //{
@@ -190,44 +193,145 @@ public class SpawnController : MonoBehaviour
             //{
             //    destrObject.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
             //}
-            destrObject.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
+            elementOnScene.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
 
-            destructibleObjects.Add(destrObject);
+            elementsOnScene.Add(elementOnScene);
 
         }
+    }
+    private void SmallObjectsSpawn()
+    {
+        var smallRandom = Random.Range(0, smallPrefabs.Length);
 
-        while (destructibleObjects[0].gameObject.transform.position.z < playerPositionZ)
+        int spawnCount = smallCount;
+
+        while (spawnCount > 0)
         {
-            Destroy(destructibleObjects[0].gameObject);
-            destructibleObjects.RemoveAt(0);
-        }
+            spawnCount--;
+            Vector3 treePosition = new Vector3(Random.Range(playerPositionX - 20, playerPositionX + 20), 0, Random.Range(playerPositionZ + 380, playerPositionZ + 420));
+            elementOnScene = Instantiate(smallPrefabs[0], treePosition, Quaternion.identity, spawnObjects);
+            ElementComplexity(elementOnScene);
 
+        }
+    }
+    private void MediumObjectsSpawn(float startSpawn, float finishSpawn)
+    {
+
+        int spawnCount = mediumCount;
+
+        //while (spawnCount > 0)
+        {
+            //var mediumRandom = Random.Range(0, mediumPrefabs.Length);
+            //spawnCount--;
+            //Vector3 position = new Vector3(Random.Range(-prefabsZoneWidth, prefabsZoneWidth), 0, Random.Range(startSpawn + 40, finishSpawn - 40));
+            //destrObject = Instantiate(mediumPrefabs[mediumRandom], position, Quaternion.identity, spawnObjects);
+             
+            for (float z = startSpawn + 100; z <= finishSpawn - 40; z += Random.Range(20, 25))
+            {
+                for (float x = -prefabsZoneWidth; x <= prefabsZoneWidth; x += Random.Range(20, 25))
+                {
+                    var mediumRandom = Random.Range(0, mediumPrefabs.Length);
+                    if (Random.Range(0, 100) < 20 && spawnCount > 0)
+                    {
+                        spawnCount--;
+                        Debug.Log(spawnCount);
+                        elementOnScene = Instantiate(mediumPrefabs[mediumRandom], new Vector3(x, 0, z), Quaternion.identity, spawnObjects);
+                        ElementComplexity(elementOnScene);
+                    }
+
+                }
+            }
+
+        }
 
     }
+    private void LargeObjectsSpawn(float startSpawn, float finishSpawn)
+    {
+        int largeSpawnCount = largeCount;
+        int smallSpawnCount = smallCount;
+        int mediumSpawnCount = mediumCount;
+
+        for (float z = startSpawn + 100; z <= finishSpawn - 40; z += Random.Range(20, 25))
+        {
+            for (float x = -prefabsZoneWidth; x <= prefabsZoneWidth; x += Random.Range(20, 25))
+            {
+                var objectType = Random.Range(0, 3);
+
+                Debug.Log(objectType);
+
+                switch (objectType)
+                {
+                    case 0:
+                            var smallRandom = Random.Range(0, smallPrefabs.Length);
+                            elementOnScene = Instantiate(smallPrefabs[smallRandom], new Vector3(x, 0, z), Quaternion.identity, spawnObjects);
+                        break;
+                    case 1:
+                        if (Random.Range(0, 100) < 40)
+                        {
+                            var mediumRandom = Random.Range(0, mediumPrefabs.Length);
+                            elementOnScene = Instantiate(mediumPrefabs[mediumRandom], new Vector3(x, 0, z), Quaternion.identity, spawnObjects);
+                        }
+                        break;
+                    case 2:
+                        if (Random.Range(0, 100) < 10 && largeSpawnCount > 0)
+                        {
+                            largeSpawnCount--;
+
+                            var largeRandom = Random.Range(0, largePrefabs.Length);
+                            Debug.Log(largeRandom);
+                            elementsOnScene.Add(Instantiate(largePrefabs[largeRandom], new Vector3(x, 0, z), Quaternion.identity, spawnObjects));
+
+                        }
+                        break;
+
+                }
+            }
+        }
+
+    }
+
+
     private void LocationSpawn(float startSpawn, float finishSpawn)
     {
         for (float z = startSpawn; z <= finishSpawn; z += 10)
         {
-            for (int x = -locationWidth; x < locationWidth + 10; x += 10)
+            for (float x = -locationWidth; x <= locationWidth; x += 10)
             {
                 //var exist = locationObjects.Exists(c => c.gameObject.transform.position.x == x && c.gameObject.transform.position.z == z);
 
                 if ((x == -locationWidth || x == locationWidth)/* && !exist*/)
                 {
-                    locObject = Instantiate(locationPrefabs[1], new Vector3(x, 0, z), Quaternion.identity);
-                    locationObjects.Add(locObject);
+                    elementOnScene = Instantiate(lateralBorder, new Vector3(x, 0, z), Quaternion.identity, spawnObjects);
+                    elementsOnScene.Add(elementOnScene);
                 }
                 else if (!(x == -locationWidth || x == locationWidth) /* && !exist*/)
                 {
-                    locObject = Instantiate(locationPrefabs[0], new Vector3(x, 0, z), Quaternion.identity);
-                    locationObjects.Add(locObject);
+                    elementOnScene = Instantiate(ground, new Vector3(x, 0, z), Quaternion.identity, spawnObjects);
+                    elementsOnScene.Add(elementOnScene);
                 }
             }
         }
-        while (locationObjects[0].gameObject.transform.position.z < playerPositionZ)
+    }
+    private void ElementComplexity(GameObject generatedElement)
+    {
+        if (generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length > 0)
         {
-            Destroy(locationObjects[0].gameObject);
-            locationObjects.RemoveAt(0);
+            for (int i = 0; i < generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length; i++)
+            {
+                elementsOnScene.Add(generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].gameObject);
+            }
+        }
+        else
+        {
+            elementsOnScene.Add(generatedElement);
+        }
+    }
+    private void RemoveElements(List<GameObject> listGameObject)
+    {
+        while (listGameObject[0].gameObject.transform.position.z < GameHelper.Instance.transform.position.z)
+        {
+            Destroy(listGameObject[0].gameObject);
+            listGameObject.RemoveAt(0);
         }
     }
 }

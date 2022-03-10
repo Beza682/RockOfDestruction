@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637800608314756843
-    m_Hash: 3144672293
+      ticks: 637822540267245770
+    m_Hash: 3983031524
   m_LockFileStatus:
     m_FilePath: C:/GitHub/RockOfDestruction/Rock of Destruction!/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637800608344941845
-    m_Hash: 3862823486
+      ticks: 637822540267325442
+    m_Hash: 2789042607
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,57 @@ m_LocalPackages:
 m_ProjectPath: C:/GitHub/RockOfDestruction/Rock of Destruction!/Packages
 m_EditorVersion: 2021.2.7f1 (6bd9e232123f)
 m_ResolvedPackages:
+- packageId: com.unity.2d.sprite@1.0.0
+  testable: 0
+  isDirectDependency: 1
+  version: 1.0.0
+  source: 2
+  resolvedPath: C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PackageCache\com.unity.2d.sprite@1.0.0
+  assetPath: Packages/com.unity.2d.sprite
+  name: com.unity.2d.sprite
+  displayName: 2D Sprite
+  author:
+    name: 
+    email: 
+    url: 
+  category: 2D
+  type: 
+  description: Use Unity Sprite Editor Window to create and edit Sprite asset properties
+    like pivot, borders and Physics shape
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 1.0.0
+    compatible:
+    - 1.0.0
+    verified: 1.0.0
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - 2d
+  - sprite
+  - sprite editor window
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 1.0.0
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.15.7
   testable: 0
   isDirectDependency: 1
@@ -77,11 +128,13 @@ m_ResolvedPackages:
     - 1.14.7
     - 1.14.9
     - 1.14.12
+    - 1.14.13
     - 1.15.1
     - 1.15.4
     - 1.15.7
     - 1.15.9
     - 1.15.12
+    - 1.15.13
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -97,6 +150,7 @@ m_ResolvedPackages:
     - 1.15.7
     - 1.15.9
     - 1.15.12
+    - 1.15.13
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -107,7 +161,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.15.12
+    verified: 1.15.13
   dependencies:
   - name: com.unity.nuget.newtonsoft-json
     version: 2.0.0
@@ -347,9 +401,11 @@ m_ResolvedPackages:
     - 1.2.2
     - 1.2.3
     - 1.2.4
+    - 1.2.5
     compatible:
     - 1.2.4
-    verified: 1.2.4
+    - 1.2.5
+    verified: 1.2.5
   dependencies: []
   resolvedDependencies: []
   keywords: []
@@ -425,14 +481,16 @@ m_ResolvedPackages:
     - 1.1.27
     - 1.1.29
     - 1.1.30
+    - 1.1.31
     - 2.0.1-pre.12
     - 2.0.1-pre.18
     compatible:
     - 1.1.29
     - 1.1.30
+    - 1.1.31
     - 2.0.1-pre.12
     - 2.0.1-pre.18
-    verified: 1.1.30
+    verified: 1.1.31
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -723,11 +781,13 @@ m_ResolvedPackages:
     - 1.6.4
     - 1.7.0-pre.1
     - 1.7.0-pre.2
+    - 1.7.0
     compatible:
     - 1.6.3
     - 1.6.4
     - 1.7.0-pre.1
     - 1.7.0-pre.2
+    - 1.7.0
     verified: 1.6.4
   dependencies:
   - name: com.unity.modules.director
@@ -2647,7 +2707,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: library
+  type: 
   description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
     synced to version 12.0.2.
 
@@ -2662,10 +2722,24 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.1-preview.1
+    - 1.1.2
+    - 2.0.0-preview
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
     - 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
     compatible:
     - 2.0.0
-    verified: 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
+    verified: 2.0.2
   dependencies: []
   resolvedDependencies: []
   keywords: []
@@ -2678,7 +2752,7 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 637237898320000000
   documentationUrl: 
   hasRepository: 1
   repository:
@@ -2714,8 +2788,24 @@ m_ResolvedPackages:
   versions:
     all:
     - 1.0.1
+    - 1.1.0-pre.7
+    - 1.1.0-pre.8
+    - 1.1.0-pre.9
+    - 1.1.0-pre.10
+    - 1.1.0-pre.11
+    - 1.1.0-pre.41
+    - 1.1.0-pre.69
+    - 1.2.0
     compatible:
     - 1.0.1
+    - 1.1.0-pre.7
+    - 1.1.0-pre.8
+    - 1.1.0-pre.9
+    - 1.1.0-pre.10
+    - 1.1.0-pre.11
+    - 1.1.0-pre.41
+    - 1.1.0-pre.69
+    - 1.2.0
     verified: 1.0.1
   dependencies:
   - name: com.unity.modules.unitywebrequest
@@ -2733,7 +2823,7 @@ m_ResolvedPackages:
     capabilities: 7
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 637604883250000000
   documentationUrl: 
   hasRepository: 1
   repository:
