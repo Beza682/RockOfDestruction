@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: 8772ceca64075074db15771847376993
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_0"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 966
+        width: 391
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf141caf016ccc4bbbf1266ee2bab5c
+      internalID: 498973896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_1"
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 966
+        width: 436
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4deb152bb0246914c8db41f6c206df4b
+      internalID: 1902935535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_2"
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 796
+        width: 142
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e75c5c991dc1e49a6f591ecea871dc
+      internalID: 2146611621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_3"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 796
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1bdee93a830904682952ba941ff0ca
+      internalID: 32175841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_4"
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 796
+        width: 141
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76488469384ab334a8e1c55f4c083d72
+      internalID: 2039083758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_5"
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 796
+        width: 141
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26553ab3883f02b4e804c0e8b360082b
+      internalID: -738792881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_6"
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 796
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b3560809aa896b4abc28e1e2395ac02
+      internalID: -548822527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_7"
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 796
+        width: 141
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fe8597a3152d849a96e473a823ef2e
+      internalID: -1552176383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_8"
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 616
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db949632ba9989d4b9d5c35a2b5ae22e
+      internalID: -716215441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_9"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 616
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6b54f47217ab34fb99d7ad480b2612
+      internalID: -1109232539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_10"
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 616
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09dec1886c77e7248bbb6138e33e4cd4
+      internalID: -1620338224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_11"
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 616
+        width: 141
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdbbc545bfd094f45874bc10ca032fa0
+      internalID: 727369073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_12"
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 616
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471ffa3ba3b424c4a8d9be7e6d0b0084
+      internalID: -1669116278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_13"
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 616
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60f9d370ba97744d8343ae7f9cf3b1a
+      internalID: 1777926680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_14"
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 435
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8b54ccc9cbfc944a0d45ac32f7d3d1
+      internalID: -1905001977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_15"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 435
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7333acc2ac97b014f9b2154153540c69
+      internalID: 1596713311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_16"
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 435
+        width: 139
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4910db0d23596043955a649c34d2184
+      internalID: -1146974614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_17"
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 435
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5274ef48e710a5b42b108c0cb30a4407
+      internalID: -502376042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_18"
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 435
+        width: 140
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bcd42ca9eebb046bde7dd473161f17
+      internalID: -1157643513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_19"
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 435
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ce70cb2331fb047b7844225237b56b
+      internalID: 1503137673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_20"
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 255
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649f0d08640ab8b4eac016fbe68bf3ff
+      internalID: 1124481696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_21"
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 255
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6c87e6055cd30843ada63b1b02353d7
+      internalID: 1663618888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_22"
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 255
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f389c8e011077b40a775d6c9b8e4aa2
+      internalID: -1151233206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_23"
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 255
+        width: 140
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144500ace1ef0a147a45eea8d1ab3bc8
+      internalID: -503372211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_24"
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 255
+        width: 140
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659bf198807f02a4c9525b402c7c7eea
+      internalID: -1602548712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_25"
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 255
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6556d77d8dac04cb8bfc4e614a6240
+      internalID: -1205698458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u2014Pngtree\u2014set game buttons and popup_5981581_26"
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 81
+        width: 573
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb2cb736c1e5de41932fc59083dc23e
+      internalID: 856574982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_24": -1602548712
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_0": 498973896
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_18": -1157643513
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_2": 2146611621
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_7": -1552176383
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_11": 727369073
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_23": -503372211
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_4": 2039083758
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_6": -548822527
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_19": 1503137673
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_17": -502376042
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_21": 1663618888
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_9": -1109232539
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_12": -1669116278
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_26": 856574982
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_13": 1777926680
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_15": 1596713311
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_25": -1205698458
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_1": 1902935535
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_14": -1905001977
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_16": -1146974614
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_10": -1620338224
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_8": -716215441
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_5": -738792881
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_3": 32175841
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_22": -1151233206
+      "\u2014Pngtree\u2014set game buttons and popup_5981581_20": 1124481696
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
