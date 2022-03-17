@@ -1,0 +1,4 @@
+#Thu Mar 17 12:24:17 KRAT 2022
+base.0=C\:\\GitHub\\RockOfDestruction\\Rock of Destruction\!\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

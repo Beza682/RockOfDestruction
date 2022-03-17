@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UI; // ¬ итоге это нужно удалить
 
 public class SoundManager : MonoBehaviour
 {
-    [Header("Toggles")]
-    public Toggle music;
-    public Toggle effects;
-    public Toggle vibration;
+    public static SoundManager Instance;
+    //private static Toggle _music;
+    //private static Toggle _effects;
+    //private static Toggle _vibration;
+
+    public Toggle music;      // просто удалить, после того, как перенесу кнопки
+    public Toggle effects;    // просто удалить, после того, как перенесу кнопки
+    public Toggle vibration;  // просто удалить, после того, как перенесу кнопки
 
     [Header("AudioSources")]
 
@@ -17,8 +21,15 @@ public class SoundManager : MonoBehaviour
 
     [Header("AudioClips")]
     public AudioClip[] background;
+    public AudioClip[] people;
     public AudioClip button;
 
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
         BackgroundSound();
@@ -26,11 +37,18 @@ public class SoundManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
+    //public static void Settings(Toggle music, Toggle effects, Toggle vibration)
+    //{
+    //    _music = music;
+    //    _effects = effects;
+    //    _vibration = vibration;
+    //}
+
     public void BackgroundSound()
     {
-        if (!music.isOn)
+        if (!music.isOn) // Data.Instance.settings.music  воткнуть вот это
         {
             backgroundSource.clip = background[0];
             backgroundSource.Play();
@@ -52,27 +70,45 @@ public class SoundManager : MonoBehaviour
             effectsSource.Play();
         }
     }
-    public void MuteMusic()
+    public void CollisionSounds(int value)
     {
-        if (music.isOn)
+        if (!effects.isOn)
         {
-            backgroundSource.mute = true;
+            switch (value)
+            {
+                case 0:
+
+                    break;
+                case 1:
+                    var peopleClip = Random.Range(0, people.Length);
+                    //effectsSource.clip = people[peopleClip];
+                    effectsSource.PlayOneShot(people[peopleClip]);
+                    break;
+            }
         }
-        else
-        {
-            backgroundSource.mute = false;
-        }
+    }
+    public void MuteMusic() //перенести в UI это и все кнопки
+    {
+        backgroundSource.mute = music.isOn;
+        Data.Instance.settings.music = music.isOn;
+        //if (_music.isOn)
+        //{
+        //    backgroundSource.mute = true;
+        //}
+        //else
+        //{
+        //    backgroundSource.mute = false;
+        //}
     }
     public void MuteEffects()
     {
         effectsSource.mute = effects.isOn;
-        //if (effects.isOn)
-        //{
-        //    effectsSource.mute = true;
-        //}
-        //else
-        //{
-        //    effectsSource.mute = false;
-        //}
+    }
+    public void Vibration()  
+    {
+        if (!vibration.isOn)
+        {
+            Handheld.Vibrate();
+        }
     }
 }

@@ -5,6 +5,7 @@ public class DestructionOfObjects : MonoBehaviour
 {
     public float objectStrength;
     public float value;
+    public int AudioClip;
 
     public static List<GameObject> destructibleObjects;
     public static float playerStrength;
@@ -14,13 +15,20 @@ public class DestructionOfObjects : MonoBehaviour
         //playerStrength = GameHelper.Instance.playerStrength;
         //Debug.Log(playerStrength);
     }
-
+    private void Update() // »нстанс, который смотрит координату Z персонажа
+    {
+        
+    }
     private void OnCollisionEnter (Collision other)
     {
         if (other.transform.CompareTag("Player"))
         {
+            //SoundManager.Vibration();
+            SoundManager.Instance.Vibration();
+            SoundManager.Instance.CollisionSounds(AudioClip);
+
             //Debug.Log(value);
-            Debug.Log(objectStrength);
+            //Debug.Log(objectStrength);
             //Debug.Log(playerStrength);
 
             if ((playerStrength > objectStrength || playerStrength == objectStrength) && objectStrength > 1)

@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     private Vector2 screenPoint;
     private Vector2 deltaScreenPoint;
 
-
     void Start()
     {
         transform.localScale = transform.localScale * size;
@@ -28,37 +27,71 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        PlayerMove();
         rb.AddForce(direction.normalized * acceleration);
         GameHelper.Instance.distance = transform.position.z;
 
     }
-    void OnMouseDown()
+    private void PlayerMove()
     {
-        screenPoint = Camera.main.ViewportToScreenPoint(Input.mousePosition);
-    }
-
-    void OnMouseDrag()
-    {
-        deltaScreenPoint = Camera.main.ViewportToScreenPoint(Input.mousePosition);
-
-        if (screenPoint.x < deltaScreenPoint.x/* && direction.x < 10*/)
+        if (Input.GetMouseButtonDown(0))
         {
-            //direction.x += 1;
-            direction.x = 1;
+            screenPoint = Camera.main.ViewportToScreenPoint(Input.mousePosition);
 
-            rb.AddForce(Vector3.right * turnAcceleration);
         }
-        else if (screenPoint.x > deltaScreenPoint.x/* && direction.x > -10*/)
+        else if (Input.GetMouseButtonUp(0))
         {
-            //direction.x -= 1;
-            direction.x = -1;
+            direction.x = 0;
 
-            rb.AddForce(Vector3.left * turnAcceleration);
+        }
+        else if (Input.GetMouseButton(0))
+        {
+            deltaScreenPoint = Camera.main.ViewportToScreenPoint(Input.mousePosition);
+
+            if (screenPoint.x < deltaScreenPoint.x/* && direction.x < 10*/)
+            {
+                //direction.x += 1;
+                direction.x = 1;
+
+                rb.AddForce(Vector3.right * turnAcceleration);
+            }
+            else if (screenPoint.x > deltaScreenPoint.x/* && direction.x > -10*/)
+            {
+                //direction.x -= 1;
+                direction.x = -1;
+
+                rb.AddForce(Vector3.left * turnAcceleration);
+            }
         }
     }
+    //void OnMouseDown()
+    //{
+    //    screenPoint = mainCamera.ScreenToViewportPoint(Input.mousePosition);
+    //}
 
-    private void OnMouseUp()
-    {
-        direction.x = 0;
-    }
+
+    //void OnMouseDrag()
+    //{
+    //    deltaScreenPoint = mainCamera.ScreenToViewportPoint(Input.mousePosition);
+
+    //    if (screenPoint.x < deltaScreenPoint.x/* && direction.x < 10*/)
+    //    {
+    //        //direction.x += 1;
+    //        direction.x = 1;
+
+    //        rb.AddForce(Vector3.right * turnAcceleration);
+    //    }
+    //    else if (screenPoint.x > deltaScreenPoint.x/* && direction.x > -10*/)
+    //    {
+    //        //direction.x -= 1;
+    //        direction.x = -1;
+
+    //        rb.AddForce(Vector3.left * turnAcceleration);
+    //    }
+    //}
+
+    //private void OnMouseUp()
+    //{
+    //    direction.x = 0;
+    //}
 }

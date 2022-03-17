@@ -1,18 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Data : MonoBehaviour
+[Serializable]
+public class Data
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Data Instance;
+
+    public Settings settings;
+
+    public Data()
     {
-        
+        settings = new Settings()
+        {
+            music = false,
+            //effects = false,
+            //vibration = false,
+        };
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    [Serializable]
+    public class Settings
     {
-        
+        public bool music;
+        //public bool effects;
+        //public bool vibration;
     }
 }

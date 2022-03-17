@@ -218,7 +218,7 @@ public class SpawnControllerV2 : MonoBehaviour
         return generatedElement;
     }
 
-    private void RemoveElements(List<GameObject> listGameObject)
+    private void RemoveElements(List<GameObject> listGameObject) // больно смотреть, нужно удалить
     {
         while (listGameObject[0].gameObject.transform.position.z < GameHelper.Instance.transform.position.z)
         {
