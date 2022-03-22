@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public static UIManager Instance;
+
     [Header("UI")]
     public GameObject menu;
     public Toggle menuToggle;
@@ -22,6 +24,9 @@ public class UIManager : MonoBehaviour
     public GameObject skins;
     public GameObject achievement;
 
+    [Header("Language")]
+    public Toggle language;
+
     [Header("Audio")]
     public Toggle music;
     public Toggle effects;
@@ -32,15 +37,36 @@ public class UIManager : MonoBehaviour
         get { return Data.Instance.settings.music; }
         set { Data.Instance.settings.music = value; }
     }
-
+    private bool Effects
+    {
+        get { return Data.Instance.settings.effects; }
+        set { Data.Instance.settings.effects = value; }
+    }
+    private bool Vibration
+    {
+        get { return Data.Instance.settings.vibration; }
+        set { Data.Instance.settings.vibration = value; }
+    }
+    private bool Language
+    {
+        get { return Data.Instance.settings.language; }
+        set { Data.Instance.settings.language = value; }
+    }
     private void Awake()
     {
+        Instance = this;
 
-        //SoundManager.Instance.music.isOn = music.isOn;
         //music.isOn = Music;
+        //effects.isOn = Effects;
+        //vibration.isOn = Vibration;
+
+        //music.isOn = Data.Instance.settings.music;
+        //effects.isOn = Data.Instance.settings.effects;
+        //vibration.isOn = Data.Instance.settings.vibration;
+
         Time.timeScale = 0;
 
-
+        CanvasElementsActivation(true, false, true, false, true, false, false, false, false, false);
         menu.SetActive(true);
         mainMenu.SetActive(false);
         settings.SetActive(true);
@@ -51,81 +77,169 @@ public class UIManager : MonoBehaviour
         gameOver.SetActive(false);
         skins.SetActive(false);
         achievement.SetActive(false);
-
-
-        //music.isOn = Data.Instance.settings.music;
-        //Debug.Log(music.isOn);
-
-        //SoundManager.Settings(music, effects, vibration);
     }
     private void Start()
     {
+        music.isOn = Music;
+        effects.isOn = Effects;
+        vibration.isOn = Vibration;
+        language.isOn = Language;
+
         //music.isOn = Data.Instance.settings.music;
+        //effects.isOn = Data.Instance.settings.effects;
+        //vibration.isOn = Data.Instance.settings.vibration;
 
-        SoundManager.Instance.music = music;
-        SoundManager.Instance.effects = effects;
-        SoundManager.Instance.vibration = vibration;
-
-        //Debug.Log(music.isOn);
     }
 
     private void Update()
     {
-        //Data.Instance.settings.music = music.isOn;
-
-        //SoundManager.Instance.music = music;
-        //SoundManager.Instance.effects = effects;
-        //SoundManager.Instance.vibration = vibration;
-        //Music = music.isOn;
-
-
-        //Data.Instance.settings.music = music.isOn;
-
-        //Debug.Log(Data.Instance.settings.music);
 
     }
-    public void Play()
+    public void SelectedLanguage()
     {
+        SoundManager.Instance.PlayTabButton();
+
+        if (!language.isOn)
+        {
+            LocalizationManager.instance.SetLocalization(SystemLanguage.English);
+        }
+        else if (language.isOn)
+        {
+            LocalizationManager.instance.SetLocalization(SystemLanguage.Russian);
+        }
+    }
+    private void CanvasElementsActivation(bool _menu, bool _mainMenu, bool _settings, bool _settingsMenu, bool _start, bool _game, bool _pause, 
+        bool _gameOver, bool _skins, bool _achievement)
+    {
+        menu.SetActive(_menu);
+        mainMenu.SetActive(_mainMenu);
+        settings.SetActive(_settings);
+        settingsMenu.SetActive(_settingsMenu);
+        start.SetActive(_start);
+        game.SetActive(_game);
+        pause.SetActive(_pause);
+        gameOver.SetActive(_gameOver);
+        skins.SetActive(_skins);
+        achievement.SetActive(_achievement);
+
+    }
+
+    public void StrengthUpgradeButtom()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+    }
+    public void SizehUpgradeButtom()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+    }
+    public void OfflineEarningshUpgradeButtom()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+    }
+    public void PlayButtom()
+    {
+        SoundManager.Instance.PlayTabButton();
         start.SetActive(false);
         menu.SetActive(false);
         settings.SetActive(false);
         game.SetActive(true);
         menuToggle.isOn = false;
         settingsToggle.isOn = false;
-        Time.timeScale = 1;
+
+        Time.timeScale = 1;       
+        SoundManager.Instance.BackgroundSound();
+
     }
 
-    public void PauseOn()
+    public void PauseOnButtom()
     {
+        SoundManager.Instance.PlayTabButton();
         Time.timeScale = 0;
+        SoundManager.Instance.BackgroundSound();
+
         game.SetActive(false);
         pause.SetActive(true);
         settings.SetActive(true);
     }
 
-    public void PauseOff()
+    public void PauseOffButtom()
     {
+        SoundManager.Instance.PlayTabButton();
+
         game.SetActive(true);
         pause.SetActive(false);
         settings.SetActive(false);
         settingsToggle.isOn = false;
-        Time.timeScale = 1;
+
+        Time.timeScale = 1; 
+        SoundManager.Instance.BackgroundSound();
+
     }
-    public void MainMenuActivation() 
+    public void MainMenuActivationToggle() 
     {
+        SoundManager.Instance.PlayTabButton();
         mainMenu.SetActive(menuToggle.isOn);
     }
-    public void SettingsMenuActivation() 
+    public void SettingsMenuActivationToggle() 
     {
+        SoundManager.Instance.PlayTabButton();
         settingsMenu.SetActive(settingsToggle.isOn);
     }
-    public void MainMenu()
+    public void MainMenuButtom()
     {
+        SoundManager.Instance.PlayTabButton();
+
         if (pause)
         {
             pause.SetActive(false);
         }
+        SoundManager.Instance.BackgroundSound();
+        SceneManager.LoadScene("GameScene");
+    }
+    public void GameOver()
+    {
+        gameOver.SetActive(true);
+        menu.SetActive(false);
+        settings.SetActive(false);
+        game.SetActive(false);
+        menuToggle.isOn = false;
+        settingsToggle.isOn = false;
+    }
+    public void MuteMusicToggle() 
+    {
+        SoundManager.Instance.PlayTabButton();
 
-        SceneManager.LoadScene("LoadScene");
+        //music.isOn = SoundManager.Instance.backgroundSource.mute;
+        //Data.Instance.settings.music = music.isOn;
+        //music.isOn = Data.Instance.settings.music;
+        Music = music.isOn;
+        SoundManager.Instance.backgroundSource.mute = music.isOn;
+        SoundManager.Instance.BackgroundSound();
+
+    }
+    public void MuteEffectsToggle()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+        //effects.isOn = SoundManager.Instance.effectsSource.mute;
+        //Data.Instance.settings.effects = effects.isOn;
+        Effects = effects.isOn;
+
+    }
+    public void LanguageToggle()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+    }
+    public void MuteVibrationToggle()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+        //vibration.isOn = SoundManager.Instance.effectsSource.mute;
+        //Data.Instance.settings.vibration = vibration.isOn;
+        Vibration = vibration.isOn;
     }
 }

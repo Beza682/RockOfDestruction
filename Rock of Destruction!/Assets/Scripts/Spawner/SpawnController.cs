@@ -52,7 +52,6 @@ public class SpawnController : MonoBehaviour
         //destrObject = destrObject = ObjectType.ObjectTyp(destructiblePrefabs);
         //prefabsZoneWidth = locationWidth - 10;
         //GameHelper.Instance.destructibleObjects = destructibleObjects;
-        DestructionOfObjects.destructibleObjects = elementsOnScene;
 
         spawnPosition = 0;
         firstSpawnZone = locationLength;
@@ -74,11 +73,11 @@ public class SpawnController : MonoBehaviour
 
     void Update()
     {
-        playerPositionZ = GameHelper.Instance.player.transform.position.z;
+        playerPositionZ = PlayerController.Instance.gameObject.transform.position.z;
 
         if (playerPositionZ >= spawnPosition)
         {
-            playerPositionX = Mathf.Round(GameHelper.Instance.player.transform.position.x);
+            playerPositionX = Mathf.Round(PlayerController.Instance.gameObject.transform.position.x);
             //Debug.Log(playerPositionX);
             spawnPosition += locationLength;
             firstSpawnZone = spawnPosition + locationLength;

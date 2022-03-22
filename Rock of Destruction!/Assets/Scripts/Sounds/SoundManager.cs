@@ -1,112 +1,133 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; // ¬ итоге это нужно удалить
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
-    //private static Toggle _music;
-    //private static Toggle _effects;
-    //private static Toggle _vibration;
-
-    public Toggle music;      // просто удалить, после того, как перенесу кнопки
-    public Toggle effects;    // просто удалить, после того, как перенесу кнопки
-    public Toggle vibration;  // просто удалить, после того, как перенесу кнопки
 
     [Header("AudioSources")]
-
     public AudioSource backgroundSource;
     public AudioSource effectsSource;
 
-    [Header("AudioClips")]
-    public AudioClip[] background;
-    public AudioClip[] people;
-    public AudioClip button;
+    [Header("BackgroundAudioClips")]
+    [SerializeField] private AudioClip menuSound;
+    [SerializeField] private AudioClip gameSound;
+
+    [Header("UIAudioClips")]
+    [SerializeField] private AudioClip buttonSound;
+
+    [Header("PlayerAudioClips")]
+    [SerializeField] private AudioClip playerDestruction;
+    [SerializeField] private AudioClip playerCollision;
+
+    [Header("PrefabsAudioClips")]
+    [SerializeField] private AudioClip[] people;
+    [SerializeField] private AudioClip[] animal1;
+    [SerializeField] private AudioClip[] animal2;
+    [SerializeField] private AudioClip[] animal3;
+    [SerializeField] private AudioClip[] tree;
+    [SerializeField] private AudioClip[] woodenBuilding;
+    [SerializeField] private AudioClip[] stoneBuilding;
+    [SerializeField] private AudioClip[] gate;
 
 
 
     private void Awake()
     {
         Instance = this;
+
     }
     void Start()
     {
         BackgroundSound();
     }
-
-    void Update()
+    private void PlayEffectsClip(AudioClip audioClip)
     {
-
+        if (!Data.Instance.settings.effects)
+        {
+            effectsSource.PlayOneShot(audioClip);
+        }
+    }    
+    private void PlayMusicClip(AudioClip audioClip)
+    {
+        if (!Data.Instance.settings.effects)
+        {
+            backgroundSource.clip = audioClip;
+            backgroundSource.Play();
+        }
     }
-    //public static void Settings(Toggle music, Toggle effects, Toggle vibration)
-    //{
-    //    _music = music;
-    //    _effects = effects;
-    //    _vibration = vibration;
-    //}
-
     public void BackgroundSound()
     {
-        if (!music.isOn) // Data.Instance.settings.music  воткнуть вот это
+        if (Time.timeScale > 0)
         {
-            backgroundSource.clip = background[0];
-            backgroundSource.Play();
+            PlayMusicClip(gameSound);
+        }
+        else
+        {
+            PlayMusicClip(menuSound);
         }
     }
-    public void GameSound()
+    public void PlayTabButton()
     {
-        if (!music.isOn)
-        {
-            backgroundSource.clip = background[1];
-            backgroundSource.Play();
-        }
+        PlayEffectsClip(buttonSound);
     }
-    public void ClickSound()
-    {
-        if (!effects.isOn)
-        {
-            effectsSource.clip = button;
-            effectsSource.Play();
-        }
-    }
-    public void CollisionSounds(int value)
-    {
-        if (!effects.isOn)
-        {
-            switch (value)
-            {
-                case 0:
 
-                    break;
-                case 1:
-                    var peopleClip = Random.Range(0, people.Length);
-                    //effectsSource.clip = people[peopleClip];
-                    effectsSource.PlayOneShot(people[peopleClip]);
-                    break;
-            }
+    public void PrefabDestructionSounds(Audio value)
+    {
+        switch (value)
+        {
+            case Audio.None:
+
+                break;
+
+            case Audio.People:
+                //var peopleClip = Random.Range(0, people.Length);
+                //effectsSource.PlayOneShot(people.[peopleClip]);
+                PlayEffectsClip(people.GetRandom());
+                break;
+
+            case Audio.Animal1:
+                PlayEffectsClip(animal1.GetRandom());
+                break;
+
+            case Audio.Animal2:
+                PlayEffectsClip(animal2.GetRandom());
+                break;
+
+            case Audio.Animal3:
+                PlayEffectsClip(animal3.GetRandom());
+                break;
+
+            case Audio.Tree:
+                PlayEffectsClip(tree.GetRandom());
+                break;
+
+            case Audio.WoodenBuilding:
+                PlayEffectsClip(woodenBuilding.GetRandom());
+                break;
+
+            case Audio.StoneBuilding:
+                PlayEffectsClip(stoneBuilding.GetRandom());
+                break;
+
+            case Audio.Gate:
+                PlayEffectsClip(gate.GetRandom());
+                break;
+
         }
     }
-    public void MuteMusic() //перенести в UI это и все кнопки
+    public void PlayerDestructionSounds()
     {
-        backgroundSource.mute = music.isOn;
-        Data.Instance.settings.music = music.isOn;
-        //if (_music.isOn)
-        //{
-        //    backgroundSource.mute = true;
-        //}
-        //else
-        //{
-        //    backgroundSource.mute = false;
-        //}
+        PlayEffectsClip(playerDestruction);
     }
-    public void MuteEffects()
+    public void PlayerCollisionSounds()
     {
-        effectsSource.mute = effects.isOn;
+        PlayEffectsClip(playerCollision);
     }
     public void Vibration()  
     {
-        if (!vibration.isOn)
+        if (!Data.Instance.settings.vibration)
         {
             Handheld.Vibrate();
         }

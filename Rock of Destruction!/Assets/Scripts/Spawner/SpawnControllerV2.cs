@@ -5,6 +5,10 @@ using UnityEngine;
 public class SpawnControllerV2 : MonoBehaviour
 {
     [Header("Location")]
+    [SerializeField] private Transform spawnObjects;
+    [SerializeField] private GameObject location;
+    [SerializeField] private GameObject spawnPoint;
+
     private float locationLength = 500;
     private float prefabsZoneWidth = 90;
 
@@ -12,10 +16,6 @@ public class SpawnControllerV2 : MonoBehaviour
     private float firstSpawnZone;
     private float secondSpawnZone;
     private float spawnStep = 100;
-
-    [SerializeField] private Transform spawnObjects;
-    [SerializeField] private GameObject location;
-    [SerializeField] private GameObject spawnPoint;
 
     [Header("LargeObjects")]
     [SerializeField] private int largeCount;
@@ -41,10 +41,6 @@ public class SpawnControllerV2 : MonoBehaviour
     [SerializeField] private GameObject wallPrefab;
 
 
-    private GameObject elementOnScene;
-    private List<GameObject> elementsOnScene = new List<GameObject>();
-
-
     private float objectStrength;
 
 
@@ -53,8 +49,6 @@ public class SpawnControllerV2 : MonoBehaviour
         spawnPosition = 0;
         firstSpawnZone = locationLength;
         secondSpawnZone = locationLength * 2;
-
-        DestructionOfObjects.destructibleObjects = elementsOnScene;
 
         LocationSpawner(spawnPosition - 100, firstSpawnZone);
 
@@ -87,7 +81,7 @@ public class SpawnControllerV2 : MonoBehaviour
     private void Update()
     {
 
-        if (GameHelper.Instance.player.transform.position.z >= spawnPosition)
+        if (PlayerController.Instance.gameObject.transform.position.z >= spawnPosition)
         {
 
             spawnPosition += locationLength;
@@ -105,24 +99,19 @@ public class SpawnControllerV2 : MonoBehaviour
                 MoveSpawner(spawnStep);
             }
             ZoneSpawner(passagePoints, firstSpawnZone);
-
-            RemoveElements(elementsOnScene);
         }
     }
     private void ZoneSpawner(Transform[] spawnPoints, float finishZone)
     {
         var passagePoint = Random.Range(0, passagePoints.Length);
-        elementOnScene = Instantiate(passagePrefab, spawnPoints[passagePoint].transform.position, Quaternion.identity, spawnObjects);
-        ChangingAnObject(elementOnScene);
-        ElementComplexity(elementOnScene);
+
+        ChangingAnObject(Instantiate(passagePrefab, spawnPoints[passagePoint].transform.position, Quaternion.identity, spawnObjects));
 
         for (float x = (-prefabsZoneWidth - 2.5f); x <= prefabsZoneWidth + 2.5f; x += 5f)
         {
             if (x < (spawnPoints[passagePoint].transform.position.x - 10f) || x > (spawnPoints[passagePoint].transform.position.x + 10f))
             {
-                elementOnScene = Instantiate(wallPrefab, new Vector3(x, 0, finishZone), Quaternion.identity, spawnObjects);
-                ChangingAnObject(elementOnScene);
-                ElementComplexity(elementOnScene);
+                ChangingAnObject(Instantiate(wallPrefab, new Vector3(x, 0, finishZone), Quaternion.identity, spawnObjects));
             }
         }
 
@@ -137,9 +126,8 @@ public class SpawnControllerV2 : MonoBehaviour
             var randomPoint = Random.Range(0, points.Count);
             var indexElement = Random.Range(0, generatedElements.Length);
 
-            elementOnScene = Instantiate(generatedElements[indexElement], points[randomPoint].transform.position, Quaternion.identity, spawnObjects);
-            ChangingAnObject(elementOnScene);
-            ElementComplexity(elementOnScene);
+            ChangingAnObject(Instantiate(generatedElements[indexElement], points[randomPoint].transform.position, Quaternion.identity, spawnObjects));
+            
             points.Remove(points[randomPoint]);
         }
         //for (int i = 0; i < spawnPoints.Length; i++)
@@ -166,22 +154,8 @@ public class SpawnControllerV2 : MonoBehaviour
     {
         for (float z = startSpawn; z < finishSpawn; z += spawnStep)
         {
-            elementsOnScene.Add(Instantiate(location, new Vector3(0, 0, z), Quaternion.identity, spawnObjects));
+            Instantiate(location, new Vector3(0, 0, z), Quaternion.identity, spawnObjects);
         }
-    }
-    private void ElementComplexity(GameObject generatedElement)
-    {
-        if (generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length > 0)
-        {
-            for (int i = 0; i < generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length; i++)
-            {
-                elementsOnScene.Add(generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].gameObject);
-            }
-        }
-        //else
-        //{
-        //    elementsOnScene.Add(generatedElement);
-        //}
     }
 
     private GameObject ChangingAnObject(GameObject generatedElement)
@@ -197,6 +171,14 @@ public class SpawnControllerV2 : MonoBehaviour
                     objectStrength = generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].objectStrength + spawnPoint.transform.position.z * 0.002f;
                     generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].objectStrength = objectStrength;
 
+                }
+                // Ќиже просто жесть, 
+                if (generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].objectStrength > PlayerCharacteristics.Instance.strength)
+                {
+                    for (int j = 0; j < generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].GetComponentsInChildren<MeshRenderer>().Length; j++)
+                    {
+                        generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].GetComponentsInChildren<MeshRenderer>()[j].material.color = Color.red;
+                    }
                 }
                 //else if (generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].objectStrength == 1)
                 //{
@@ -216,14 +198,5 @@ public class SpawnControllerV2 : MonoBehaviour
         //    //generatedElement.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
         //}
         return generatedElement;
-    }
-
-    private void RemoveElements(List<GameObject> listGameObject) // больно смотреть, нужно удалить
-    {
-        while (listGameObject[0].gameObject.transform.position.z < GameHelper.Instance.transform.position.z)
-        {
-            Destroy(listGameObject[0].gameObject);
-            listGameObject.RemoveAt(0);
-        }
     }
 }

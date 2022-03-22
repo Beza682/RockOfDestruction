@@ -1237,11 +1237,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2662231203209137808}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3161bf85d6b2a448617aaad7fe44fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectStrength: 12
+  objectStrength: 14
   value: 1500
+  AudioClip: 7
 --- !u!1 &2890996273855412666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,11 +2904,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8394657747100397218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3161bf85d6b2a448617aaad7fe44fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectStrength: 12
+  objectStrength: 14
   value: 1500
+  AudioClip: 7
 --- !u!1 &8394657747120468832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2917,11 +2919,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8394657747120468839}
+  - component: {fileID: 578238049856426762}
   - component: {fileID: 8394657747120468858}
   - component: {fileID: 8394657747120468859}
   - component: {fileID: 8394657747120468836}
   - component: {fileID: 8394657747120468837}
-  - component: {fileID: 578238049856426762}
   m_Layer: 0
   m_Name: Gate
   m_TagString: Untagged
@@ -2944,6 +2946,21 @@ Transform:
   m_Father: {fileID: 8394657747158755116}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &578238049856426762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8394657747120468832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectStrength: 6
+  value: 1000
+  AudioClip: 8
 --- !u!33 &8394657747120468858
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3023,20 +3040,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &578238049856426762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8394657747120468832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a3161bf85d6b2a448617aaad7fe44fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectStrength: 8
-  value: 1000
 --- !u!1 &8394657747158755117
 GameObject:
   m_ObjectHideFlags: 0
