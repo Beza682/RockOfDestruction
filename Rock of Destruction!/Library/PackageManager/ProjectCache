@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637822540267245770
-    m_Hash: 3983031524
+      ticks: 637840859249696272
+    m_Hash: 3334428746
   m_LockFileStatus:
     m_FilePath: C:/GitHub/RockOfDestruction/Rock of Destruction!/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637822540267325442
-    m_Hash: 2789042607
+      ticks: 637840859249760550
+    m_Hash: 3860349284
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -73,6 +73,108 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.0.0
     nextVersion: 
+- packageId: com.unity.ads@4.0.1
+  testable: 0
+  isDirectDependency: 1
+  version: 4.0.1
+  source: 1
+  resolvedPath: C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PackageCache\com.unity.ads@4.0.1
+  assetPath: Packages/com.unity.ads
+  name: com.unity.ads
+  displayName: Advertisement
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Unity Ads is a video ad network for iOS and Android that allows you
+    to quickly and effectively monetize your games.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.0.3
+    - 0.0.4
+    - 0.0.5
+    - 0.0.6
+    - 0.0.7
+    - 0.0.8
+    - 0.0.10
+    - 0.0.11
+    - 0.0.12
+    - 0.0.13
+    - 0.0.14
+    - 0.0.15
+    - 0.0.16
+    - 2.0.0
+    - 2.0.3
+    - 2.0.4
+    - 2.0.7
+    - 2.0.8
+    - 2.3.1
+    - 2.3.2
+    - 3.0.1
+    - 3.0.2
+    - 3.0.3
+    - 3.1.1
+    - 3.2.0
+    - 3.3.0
+    - 3.3.1
+    - 3.4.0
+    - 3.4.1
+    - 3.4.2
+    - 3.4.4
+    - 3.4.5
+    - 3.4.7
+    - 3.4.9
+    - 3.5.0
+    - 3.5.2
+    - 3.6.1
+    - 3.7.0
+    - 3.7.1
+    - 3.7.3
+    - 3.7.5
+    - 4.0.0
+    - 4.0.1
+    compatible:
+    - 3.7.5
+    - 4.0.0
+    - 4.0.1
+    verified: 3.7.5
+  dependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - ads
+  - unity
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637818165290000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/Unity-Technologies/unity-ads-sdk.git
+    revision: 9496611654be181dbad94d47dc155e2b08a083ce
+    path: 
+  unityLifecycle:
+    version: 3.7.5
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.15.7
   testable: 0
   isDirectDependency: 1
@@ -129,12 +231,14 @@ m_ResolvedPackages:
     - 1.14.9
     - 1.14.12
     - 1.14.13
+    - 1.14.15
     - 1.15.1
     - 1.15.4
     - 1.15.7
     - 1.15.9
     - 1.15.12
     - 1.15.13
+    - 1.15.15
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -151,6 +255,7 @@ m_ResolvedPackages:
     - 1.15.9
     - 1.15.12
     - 1.15.13
+    - 1.15.15
     - 2.0.0-preview.6
     - 2.0.0-preview.8
     - 2.0.0-preview.15
@@ -161,7 +266,7 @@ m_ResolvedPackages:
     - 2.1.0-preview.3
     - 2.1.0-preview.5
     - 2.1.0-preview.6
-    verified: 1.15.13
+    verified: 1.15.15
   dependencies:
   - name: com.unity.nuget.newtonsoft-json
     version: 2.0.0
@@ -258,12 +363,14 @@ m_ResolvedPackages:
     - 3.0.9
     - 3.0.10
     - 3.0.12
+    - 3.0.13
     compatible:
     - 3.0.7
     - 3.0.9
     - 3.0.10
     - 3.0.12
-    verified: 3.0.12
+    - 3.0.13
+    verified: 3.0.13
   dependencies:
   - name: com.unity.ext.nunit
     version: 1.0.6
@@ -629,6 +736,7 @@ m_ResolvedPackages:
     - 2.1.6
     - 2.2.0-preview.1
     - 2.2.0-preview.2
+    - 2.2.0-preview.3
     - 3.0.0-preview.1
     - 3.0.0-preview.3
     - 3.0.0-preview.4
@@ -648,11 +756,13 @@ m_ResolvedPackages:
     - 3.0.6
     - 3.2.0-pre.1
     - 3.2.0-pre.2
+    - 3.2.0-pre.3
     - 4.0.0-pre.1
     compatible:
     - 3.0.6
     - 3.2.0-pre.1
     - 3.2.0-pre.2
+    - 3.2.0-pre.3
     verified: 3.0.6
   dependencies:
   - name: com.unity.ugui
@@ -782,12 +892,14 @@ m_ResolvedPackages:
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
+    - 1.7.1
     compatible:
     - 1.6.3
     - 1.6.4
     - 1.7.0-pre.1
     - 1.7.0-pre.2
     - 1.7.0
+    - 1.7.1
     verified: 1.6.4
   dependencies:
   - name: com.unity.modules.director

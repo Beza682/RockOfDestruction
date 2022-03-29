@@ -15,12 +15,14 @@ public class LocaleImage : MonoBehaviour
     {
         //Ссылки на кэш:
         imageComponent = GetComponent<Image>();
-        LocalizationManager.instance.LanguageChanged += UpdateLocale;
+        //LocalizationManager.instance.LanguageChanged += UpdateLocale;  //Изначальное место поля, перенёс его в Start
     }
 
     private void Start()
     {
         //Убедитесь, что при активации этого объекта отображается правильный язык:
+        LocalizationManager.Instance.LanguageChanged += UpdateLocale;
+
         UpdateLocale();
     }
     /*
@@ -31,7 +33,7 @@ public class LocaleImage : MonoBehaviour
     {
         try
         {
-            Sprite response = LocalizationManager.instance.GetImage(textID);
+            Sprite response = LocalizationManager.Instance.GetImage(textID);
             if (response != null)
                 imageComponent.sprite = response;
         }

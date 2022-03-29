@@ -2,6 +2,7 @@
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PlayerScriptAssemblies\Unity.TextMeshPro.dll"
+-a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PlayerScriptAssemblies\UnityEngine.Advertisements.dll"
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PlayerScriptAssemblies\UnityEngine.UI.dll"
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\AOT\Newtonsoft.Json.dll"
 -a="C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Portable\Newtonsoft.Json.dll"

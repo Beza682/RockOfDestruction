@@ -840,6 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23268509664352166}
   - component: {fileID: 2966968876450474444}
+  - component: {fileID: 2503132981101236576}
   - component: {fileID: 23268509664352167}
   - component: {fileID: 4077915230806068603}
   m_Layer: 0
@@ -880,12 +881,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 23268509664352185}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectStrength: 1
   value: 50
   AudioClip: 1
+--- !u!114 &2503132981101236576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23268509664352185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &23268509664352167
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1506,6 +1520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23268509961005143}
   - component: {fileID: 5864075927393311540}
+  - component: {fileID: 6822146181890836407}
   - component: {fileID: 23268509961005140}
   - component: {fileID: 2222474440302145351}
   m_Layer: 0
@@ -1546,12 +1561,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 23268509961005142}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectStrength: 1
   value: 50
   AudioClip: 1
+--- !u!114 &6822146181890836407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23268509961005142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &23268509961005140
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2006,6 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23268510682749857}
   - component: {fileID: 7983897247059234280}
+  - component: {fileID: 1409177518142292741}
   - component: {fileID: 23268510682749870}
   - component: {fileID: 6065083479714459295}
   m_Layer: 0
@@ -2046,12 +2075,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 23268510682749856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectStrength: 1
   value: 50
   AudioClip: 1
+--- !u!114 &1409177518142292741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23268510682749856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &23268510682749870
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2292,6 +2334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23268511115281824}
   - component: {fileID: 497218546333779951}
+  - component: {fileID: 6614400367476008903}
   - component: {fileID: 23268511115281825}
   - component: {fileID: 5656554761777463386}
   m_Layer: 0
@@ -2332,12 +2375,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 23268511115281827}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectStrength: 1
   value: 50
   AudioClip: 1
+--- !u!114 &6614400367476008903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23268511115281827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &23268511115281825
 Rigidbody:
   m_ObjectHideFlags: 0

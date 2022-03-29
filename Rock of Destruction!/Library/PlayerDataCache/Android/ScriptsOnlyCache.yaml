@@ -1,14 +1,26 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - DestructionOfObjects
+    - AdsInitialization
+    - BannerAds
+    - BuyUpgrades
+    - DictionaryEditor
     - GameHelper
-    - LoadManager
-    - Player
+    - HintDestruction
+    - InterstitialAds
+    - LocaleTMP
+    - LocalizationManager
+    - PlayerCharacteristics
+    - PlayerController
+    - PlayerTracker
+    - PrefabCharacteristics
+    - RemoveObject
+    - RewardedAds
     - SaveManager
     - SoundManager
     - SpawnController
     - SpawnControllerV2
+    - TextEditor
     - UIManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -23,6 +35,9 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.Advertisements.dll:
+    - UnityEngine.Advertisements.Placeholder
+    - UnityEngine.Advertisements.Platform.Editor.BannerPlaceholder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -74,35 +89,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1670}
     - Class: 114
-      Script: {instanceID: 1760}
+      Script: {instanceID: 1758}
     - Class: 114
-      Script: {instanceID: 1816}
+      Script: {instanceID: 1762}
     - Class: 114
-      Script: {instanceID: 1974}
+      Script: {instanceID: 1768}
     - Class: 114
-      Script: {instanceID: 2210}
+      Script: {instanceID: 1820}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2272}
+      Script: {instanceID: 2212}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2552}
+      Script: {instanceID: 2276}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2440}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2560}
     - Class: 114
-      Script: {instanceID: 2832}
+      Script: {instanceID: 2604}
     - Class: 114
-      Script: {instanceID: 2922}
+      Script: {instanceID: 2740}
     - Class: 114
-      Script: {instanceID: 3014}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 467948}
+      Script: {instanceID: 3022}
+    - Class: 114
+      Script: {instanceID: 3078}
+    - Class: 114
+      Script: {instanceID: 3228}
+    - Class: 114
+      Script: {instanceID: 3268}
+    - Class: 114
+      Script: {instanceID: 3276}
+    - Class: 114
+      Script: {instanceID: 3596}
+    - Class: 114
+      Script: {instanceID: 3714}
+    - Class: 114
+      Script: {instanceID: 3982}
+    - Class: 114
+      Script: {instanceID: 4718}
+    - Class: 114
+      Script: {instanceID: 20048}
+    - Class: 114
+      Script: {instanceID: 20054}
+    - Class: 114
+      Script: {instanceID: 26856}
+    - Class: 114
+      Script: {instanceID: 26860}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -140,20 +179,24 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1816}
+      Script: {instanceID: 1820}
     - Class: 114
-      Script: {instanceID: 2110}
+      Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 3892}
+      Script: {instanceID: 3916}
     - Class: 114
-      Script: {instanceID: 4006}
+      Script: {instanceID: 4032}
     - Class: 114
-      Script: {instanceID: 4286}
+      Script: {instanceID: 4308}
     - Class: 114
-      Script: {instanceID: 467974}
+      Script: {instanceID: 4314}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -237,16 +280,28 @@ ScriptsOnlyBuild:
     className: SkewTextExample
   - hash:
       serializedVersion: 2
+      Hash: 53386185b0ce5979a3bb1141fc183545
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RemoveObject
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 1e81540512ca8194825136cc3ff6537a
+      Hash: b5bb583ca99c8f5a3aa72523d688c1a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameHelper
+  - hash:
+      serializedVersion: 2
+      Hash: bc7e0ed83f2ae56702d5e15ef284d4db
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DictionaryEditor
   - hash:
       serializedVersion: 2
       Hash: e6f0efd0e20669d577e9d21526b3d3f9
@@ -297,12 +352,6 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ExperimentalDestructionOfObjects
-  - hash:
-      serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -315,10 +364,10 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: 6a42733f2c6856d292f4aa1702fd3060
+      Hash: 7c7c68cdd76c64d04bf0767e91d6b743
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Player
+    className: HintDestruction
   - hash:
       serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
@@ -327,13 +376,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 78fd40141b5e748e106c20621d9a4dc8
+      Hash: 5170e82e3e1eb42522b264192fb6e7f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
   - hash:
       serializedVersion: 2
-      Hash: 9488b053d66bda7fed13f7a0d7026e69
+      Hash: 2d1ed45181fb4c493b143163d3cfab87
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnControllerV2
@@ -355,6 +404,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TextMeshSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: d8ea01ca0d551393206fa35f11cce6cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundEditor
   - hash:
       serializedVersion: 2
       Hash: 27e5341178f188b89bdc6495710b590c
@@ -447,10 +502,10 @@ ScriptsOnlyBuild:
     className: Benchmark03
   - hash:
       serializedVersion: 2
-      Hash: 7e43abcc437af4141cb2ba664e72f954
+      Hash: 2748791afe5ac5c9e95b9e3980c495bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DestructionOfObjects
+    className: BuyUpgrades
   - hash:
       serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
@@ -507,6 +562,12 @@ ScriptsOnlyBuild:
     className: Benchmark04
   - hash:
       serializedVersion: 2
+      Hash: f06d4302d35821d6459fb628af0c505b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocalizationManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -525,16 +586,34 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: 4ab0256275e6bd929b05c8386714e057
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: 0cf3cce1325abacb8874f6d845789a4d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextEditor
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 3dbc6a2ef94c5c33b25f35df7d43560d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocaleTMP
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -627,6 +706,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 0a9cbafb761d444c903f5516d2ec0687
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PrefabCharacteristics
+  - hash:
+      serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -657,7 +742,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: d801f38a6d38ca886f76a0ce668d6044
+      Hash: 98cdbf26cd19164d910662eed98a51b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SoundManager
@@ -679,6 +764,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 3dbc6a2ef94c5c33b25f35df7d43560d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocaleText
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -709,6 +800,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerCharacteristics
   - hash:
       serializedVersion: 2
       Hash: 0fb27be807aa299702f28ad0bcad1f46
@@ -751,6 +848,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro
     className: TMP_PhoneNumberValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SaveManager
   - hash:
       serializedVersion: 2
       Hash: fd68d84f33fad85aac38f2739c0ee270
@@ -807,6 +910,12 @@ ScriptsOnlyBuild:
     className: ObjectSpin
   - hash:
       serializedVersion: 2
+      Hash: 3dbc6a2ef94c5c33b25f35df7d43560d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LocaleImage
+  - hash:
+      serializedVersion: 2
       Hash: b6514f552bd2ee9e736a5678aa7f7de3
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -849,24 +958,66 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 83e769eee07fc231384c812eedbb8224
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerTracker
+  - hash:
+      serializedVersion: 2
       Hash: dd7520b7d4e690e8c593273e7b9fbe80
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e9a60e0e6e3910dd12012c51888112d1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SaveManager
+    className: BannerAds
+  - hash:
+      serializedVersion: 2
+      Hash: b6ba710a3351e898fb6cca47db0c87a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AdsInitialization
+  - hash:
+      serializedVersion: 2
+      Hash: a325152ad9563ed900af221c132fea36
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: CoroutineExecutor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Utilities
+    className: ApplicationQuit
+  - hash:
+      serializedVersion: 2
+      Hash: 88e2c6f501bf5dead831a3e44c30de40
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Platform.Editor
+    className: BannerPlaceholder
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
+      Hash: 3ae569d30ba6b3ec636c42cbdfe2150d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: LoadManager
+    className: InterstitialAds
+  - hash:
+      serializedVersion: 2
+      Hash: 3ae569d30ba6b3ec636c42cbdfe2150d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RewardedAds
   platform: 13
   scenePathNames:
   - Assets/Scenes/LoadScene.unity
   - Assets/Scenes/GameScene.unity
-  playerPath: "C:/Users/\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440/Desktop/Rock3.apk"
+  playerPath: "C:/Users/\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440/Desktop/Rock5.apk"

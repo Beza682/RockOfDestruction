@@ -143,56 +143,56 @@ public class SpawnController : MonoBehaviour
             //switch (objects) // подумать о том как граммотно его удалить
             //{
             //    case Objects.Alcove:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength + playerPosition * 0.02f;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength + playerPosition * 0.02f;
             //        //Debug.Log(objectStrength);
 
 
 
             //        break;
             //    case Objects.Passage:
-            //        //objectStrength = destructiblePrefabs[random]..GetComponentInChildren<DestructionOfObjects>().objectStrength + playerPosition * 0.02f;
+            //        //objectStrength = destructiblePrefabs[random]..GetComponentInChildren<PrefabCharacteristics>().objectStrength + playerPosition * 0.02f;
 
 
             //        break;
             //    case Objects.House:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength + playerPosition * 0.02f;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength + playerPosition * 0.02f;
 
 
             //        break;
             //    case Objects.Tower:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength + playerPosition * 0.02f;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength + playerPosition * 0.02f;
 
             //        break;
             //    case Objects.Wall:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength + playerPosition * 0.02f;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength + playerPosition * 0.02f;
 
 
             //        break;
             //    case Objects.People:
-            //        //objectStrength = destructiblePrefabs[random].GetComponentInChildren<DestructionOfObjects>().objectStrength;
+            //        //objectStrength = destructiblePrefabs[random].GetComponentInChildren<PrefabCharacteristics>().objectStrength;
 
             //        break;
             //    case Objects.Tree:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength;
 
             //        break;
             //    case Objects.Barrier:
-            //        //objectStrength = destructiblePrefabs[random].GetComponent<DestructionOfObjects>().objectStrength;
+            //        //objectStrength = destructiblePrefabs[random].GetComponent<PrefabCharacteristics>().objectStrength;
 
             //        break;
 
             //}
             elementOnScene = Instantiate(mediumPrefabs[mediumRandom], new Vector3(x, 0, z), Quaternion.identity);
 
-            //if (destrObject.GetComponent<DestructionOfObjects>() == null)
+            //if (destrObject.GetComponent<PrefabCharacteristics>() == null)
             //{
-            //    destrObject.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
+            //    destrObject.GetComponent<PrefabCharacteristics>().objectStrength = objectStrength;
             //}
             //else
             //{
-            //    destrObject.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
+            //    destrObject.GetComponent<PrefabCharacteristics>().objectStrength = objectStrength;
             //}
-            elementOnScene.GetComponent<DestructionOfObjects>().objectStrength = objectStrength;
+            elementOnScene.GetComponent<PrefabCharacteristics>().objectStrength = objectStrength;
 
             elementsOnScene.Add(elementOnScene);
 
@@ -313,11 +313,11 @@ public class SpawnController : MonoBehaviour
     }
     private void ElementComplexity(GameObject generatedElement)
     {
-        if (generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length > 0)
+        if (generatedElement.GetComponentsInChildren<PrefabCharacteristics>().Length > 0)
         {
-            for (int i = 0; i < generatedElement.GetComponentsInChildren<DestructionOfObjects>().Length; i++)
+            for (int i = 0; i < generatedElement.GetComponentsInChildren<PrefabCharacteristics>().Length; i++)
             {
-                elementsOnScene.Add(generatedElement.GetComponentsInChildren<DestructionOfObjects>()[i].gameObject);
+                elementsOnScene.Add(generatedElement.GetComponentsInChildren<PrefabCharacteristics>()[i].gameObject);
             }
         }
         else

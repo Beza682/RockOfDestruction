@@ -341,7 +341,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1960588360660394364}
-  - component: {fileID: -1985100072865043778}
+  - component: {fileID: 2967825536137259607}
+  - component: {fileID: 4581450080283201354}
   - component: {fileID: 1960588360660394365}
   - component: {fileID: 6846174563450728542}
   m_Layer: 0
@@ -370,7 +371,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1985100072865043778
+--- !u!114 &2967825536137259607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,12 +380,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1960588360660394363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectStrength: 1
   value: 10
   AudioClip: 6
+--- !u!114 &4581450080283201354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960588360660394363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &1960588360660394365
 Rigidbody:
   m_ObjectHideFlags: 0

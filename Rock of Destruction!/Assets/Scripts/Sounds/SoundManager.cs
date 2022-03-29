@@ -36,7 +36,6 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-
     }
     void Start()
     {
@@ -51,7 +50,7 @@ public class SoundManager : MonoBehaviour
     }    
     private void PlayMusicClip(AudioClip audioClip)
     {
-        if (!Data.Instance.settings.effects)
+        if (!Data.Instance.settings.music)
         {
             backgroundSource.clip = audioClip;
             backgroundSource.Play();

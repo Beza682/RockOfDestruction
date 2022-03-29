@@ -259,6 +259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6593358156921428862}
   - component: {fileID: 5345757708173650007}
+  - component: {fileID: 3123342271123050819}
   - component: {fileID: 6593358156921428863}
   - component: {fileID: 960063264109338051}
   m_Layer: 0
@@ -294,12 +295,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6593358156921428861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f99c57ba1314fc4997cddb77cf3ce1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a651aee7698def44a0d8540ca5fdc1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectStrength: 11
-  value: 800
+  objectStrength: 12
+  value: 1200
   AudioClip: 7
+--- !u!114 &3123342271123050819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593358156921428861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce72b355d470b2748a6f6325a5592355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activationDistance: 40
 --- !u!54 &6593358156921428863
 Rigidbody:
   m_ObjectHideFlags: 0

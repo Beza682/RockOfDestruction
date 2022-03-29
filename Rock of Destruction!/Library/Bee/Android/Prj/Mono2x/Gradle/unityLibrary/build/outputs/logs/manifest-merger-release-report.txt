@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:70-98
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:99-145
 	android:versionCode
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:2:11-69
@@ -30,15 +30,15 @@ ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\
 activity#com.unity3d.player.UnityPlayerActivity
 ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:5-11:16
 	android:screenOrientation
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-149
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:111-147
 	android:launchMode
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:150-181
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:148-179
 	android:hardwareAccelerated
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:399-434
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:397-432
 	android:resizeableActivity
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:364-398
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:362-396
 	android:configChanges
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:182-363
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:180-361
 	android:theme
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:4:69-110
 	android:name
@@ -105,28 +105,32 @@ ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:64-88
 	android:name
 		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:19:17-63
+uses-permission#android.permission.INTERNET
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:3-65
+	android:name
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:20-62
 uses-permission#android.permission.VIBRATE
-ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:3-64
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:3-64
 	android:name
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:20:20-61
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:20-61
 uses-feature#android.hardware.touchscreen
-ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:3-88
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:3-88
 	android:required
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:61-85
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:61-85
 	android:name
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:21:17-60
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:17-60
 uses-feature#android.hardware.touchscreen.multitouch
-ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:3-99
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:3-99
 	android:required
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:72-96
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:72-96
 	android:name
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:22:17-71
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:17-71
 uses-feature#android.hardware.touchscreen.multitouch.distinct
-ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:3-108
+ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:24:3-108
 	android:required
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:81-105
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:24:81-105
 	android:name
-		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:23:17-80
+		ADDED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml:24:17-80
 uses-sdk
 INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\GitHub\RockOfDestruction\Rock of Destruction!\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\src\main\AndroidManifest.xml

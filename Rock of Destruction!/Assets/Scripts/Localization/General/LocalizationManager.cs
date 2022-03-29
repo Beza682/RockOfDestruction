@@ -7,7 +7,7 @@ using System;
 */
 public class LocalizationManager : MonoBehaviour
 {
-    public static LocalizationManager instance;
+    public static LocalizationManager Instance;
 
     public SystemLanguage DefaultLanguage = SystemLanguage.English;
 
@@ -22,7 +22,7 @@ public class LocalizationManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        Instance = this;
         if (PlayerPrefs.HasKey("LastLanguage"))
         {
             SystemLanguage newLang = (SystemLanguage)PlayerPrefs.GetInt("LastLanguage");

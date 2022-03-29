@@ -9,7 +9,7 @@ public class Data
     public static Data Instance;
 
     public Settings settings;
-    public PurchasedUpgrades purchasedUpgrades;
+    public UpgradeLevel upgradeLevel;
     public Score score;
 
     public Data()
@@ -21,16 +21,16 @@ public class Data
             vibration = false,
             language = false
         };
-        purchasedUpgrades = new PurchasedUpgrades()
+        upgradeLevel = new UpgradeLevel()
         {
-            strength = 0,
-            size = 0,
-            offlineEarnings = 0
-        };        
+            strengthLevel = 1,
+            sizeLevel = 1,
+            offlineEarningsLevel = 1
+        };           
         score = new Score()
         {
-            simpleScore = 0,
-            donatScore = 0,
+            simpleScore = 9000000,
+            donatScore = 0
         };
     }
 
@@ -44,16 +44,18 @@ public class Data
     }
     
     [Serializable]
-    public class PurchasedUpgrades
+    public class UpgradeLevel
     {
-        public int strength;
-        public int size;
-        public int offlineEarnings;
+        public int strengthLevel;
+        public int sizeLevel;
+        public int offlineEarningsLevel; //Пока отложить 
     }
+
     [Serializable]
     public class Score
     {
-        public int simpleScore;
-        public int donatScore;
-    }
+        public float simpleScore;
+        public float donatScore;
+    }  
+
 }

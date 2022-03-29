@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 [RequireComponent(typeof(Text))]
 //Предоставляет возможность во время выполнения манипулировать родственным текстовым компонентом, чтобы он соответствовал текущей Locale.
 public class LocaleText : MonoBehaviour
@@ -15,13 +16,16 @@ public class LocaleText : MonoBehaviour
     {
         //Ссылки на кэш:
         textComponent = GetComponent<Text>();
-        LocalizationManager.instance.LanguageChanged += UpdateLocale;
+        //LocalizationManager.Instance.LanguageChanged += UpdateLocale;  //Изначальное место поля, перенёс его в Start
     }
 
     private void Start()
     {
         //Убедитесь, что при активации этого объекта отображается правильный язык:
+        LocalizationManager.Instance.LanguageChanged += UpdateLocale;
+
         UpdateLocale();
+
     }
     /*
     Пытается получить связанный строковый ресурс из LocalizationManager.
@@ -31,7 +35,7 @@ public class LocaleText : MonoBehaviour
     {
         try
         {
-            string response = LocalizationManager.instance.GetText(textID);
+            string response = LocalizationManager.Instance.GetText(textID);
             if (!string.IsNullOrEmpty(response))
                 textComponent.text = response;
         }

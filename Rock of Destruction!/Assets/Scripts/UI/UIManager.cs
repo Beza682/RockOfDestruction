@@ -52,6 +52,11 @@ public class UIManager : MonoBehaviour
         get { return Data.Instance.settings.language; }
         set { Data.Instance.settings.language = value; }
     }
+    private float Donate
+    {
+        get { return Data.Instance.score.donatScore; }
+        set { Data.Instance.score.donatScore = value; }
+    }
     private void Awake()
     {
         Instance = this;
@@ -59,10 +64,7 @@ public class UIManager : MonoBehaviour
         //music.isOn = Music;
         //effects.isOn = Effects;
         //vibration.isOn = Vibration;
-
-        //music.isOn = Data.Instance.settings.music;
-        //effects.isOn = Data.Instance.settings.effects;
-        //vibration.isOn = Data.Instance.settings.vibration;
+        //language.isOn = Language;
 
         Time.timeScale = 0;
 
@@ -85,10 +87,6 @@ public class UIManager : MonoBehaviour
         vibration.isOn = Vibration;
         language.isOn = Language;
 
-        //music.isOn = Data.Instance.settings.music;
-        //effects.isOn = Data.Instance.settings.effects;
-        //vibration.isOn = Data.Instance.settings.vibration;
-
     }
 
     private void Update()
@@ -101,12 +99,13 @@ public class UIManager : MonoBehaviour
 
         if (!language.isOn)
         {
-            LocalizationManager.instance.SetLocalization(SystemLanguage.English);
+            LocalizationManager.Instance.SetLocalization(SystemLanguage.English);
         }
         else if (language.isOn)
         {
-            LocalizationManager.instance.SetLocalization(SystemLanguage.Russian);
+            LocalizationManager.Instance.SetLocalization(SystemLanguage.Russian);
         }
+        Language = language.isOn;
     }
     private void CanvasElementsActivation(bool _menu, bool _mainMenu, bool _settings, bool _settingsMenu, bool _start, bool _game, bool _pause, 
         bool _gameOver, bool _skins, bool _achievement)
@@ -127,17 +126,21 @@ public class UIManager : MonoBehaviour
     public void StrengthUpgradeButtom()
     {
         SoundManager.Instance.PlayTabButton();
-
+        BuyUpgrades.Instance.BuyStrength();
+        Debug.Log(PlayerCharacteristics.Instance.strength);
     }
     public void SizehUpgradeButtom()
     {
         SoundManager.Instance.PlayTabButton();
+        BuyUpgrades.Instance.BuySize();
+        Debug.Log(PlayerCharacteristics.Instance.size);
 
     }
     public void OfflineEarningshUpgradeButtom()
     {
         SoundManager.Instance.PlayTabButton();
 
+        InterstitialAds.Instance.ViewAdsProbability(100);
     }
     public void PlayButtom()
     {
@@ -188,6 +191,18 @@ public class UIManager : MonoBehaviour
         SoundManager.Instance.PlayTabButton();
         settingsMenu.SetActive(settingsToggle.isOn);
     }
+    public void BuyDonatScore()
+    {
+        SoundManager.Instance.PlayTabButton();
+
+        RewardedAds.Instance.adBonus = (10f, 2f, Data.Instance.score.donatScore);
+        //RewardedAds.Instance.bonusValue = 10f;
+        //RewardedAds.Instance.coefficient = 2f;
+        //RewardedAds.Instance.value = Data.Instance.score.donatScore;
+        RewardedAds.Instance.ShowAd();
+
+        //Debug.Log(RewardedAds.Instance.adBonus);
+    }
     public void MainMenuButtom()
     {
         SoundManager.Instance.PlayTabButton();
@@ -197,6 +212,7 @@ public class UIManager : MonoBehaviour
             pause.SetActive(false);
         }
         SoundManager.Instance.BackgroundSound();
+        GameHelper.Instance.IncreaseSimpleScore();
         SceneManager.LoadScene("GameScene");
     }
     public void GameOver()
@@ -227,7 +243,7 @@ public class UIManager : MonoBehaviour
         //effects.isOn = SoundManager.Instance.effectsSource.mute;
         //Data.Instance.settings.effects = effects.isOn;
         Effects = effects.isOn;
-
+        Debug.Log(Data.Instance.settings.effects);
     }
     public void LanguageToggle()
     {
